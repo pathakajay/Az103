@@ -39,5 +39,6 @@ Get-AzProviderOperation "Microsoft.Compute/virtualMachines/*" | `
  New-AzRoleDefinition -Role $customRole
 Get-AzRoleDefinition -Name $customRoleName | ConvertTo-Json | Out-File '.\Subscriptions\json\Virtual Machine Operator.json'
 
-
+# If user tries to stop the virtual machine, then following error will be shown
+#Failed to stop the virtual machine 'MACHINE_NAME'. Error: The client 'CLIENT NAME' with object id 'OBJECT_ID' does not have authorization to perform action 'Microsoft.Compute/virtualMachines/deallocate/action' over scope 'ROLE_NAME' or the scope is invalid. If access was recently granted, please refresh your credentials.
  
